@@ -1,0 +1,274 @@
+.pay {
+    @apply flex items-center;
+    &__content {
+        @apply grid laptopMedium:grid-cols-[220px_1fr] desktop:grid-cols-[350px_1fr] laptopMedium:gap-[20px] desktop:gap-[30px] desktopMedium:gap-[50px] justify-center h-full;
+    }
+    &__left {
+        @apply laptopMedium:grid laptopMedium:gap-[20px] desktop:gap-[50px] mobile:hidden auto-rows-max;
+    }
+    &__hot,
+    &__skins,
+    &__form {
+        @apply rounded-[20px] desktop:px-[20px] desktop:py-[30px] laptopMedium:p-[15px];
+        box-shadow: 0 0 69px 0 rgba(151, 0, 176, 0.1);
+        background: #0000007d;
+    }
+    &__form-tab-btn {
+        border: 1px solid #fff;
+        border-radius: 10px;
+        @apply flex flex-row gap-[15px] justify-center;
+        background: rgba(138, 0, 200, 0.35);
+    }
+    &__form-tab-btn-text {
+        @apply flex flex-col;
+        span:first-child {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+        }
+        span:last-child {
+            font-family: var(--font-family);
+            font-weight: 200;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+        }
+    }
+    &__form-tab-icon {
+        @apply w-[30px] h-full;
+    }
+    &__form {
+        @apply grid desktop:grid-cols-2 mobile:gap-[30px] desktop:gap-[100px] desktop:px-[50px] desktop:pt-[40px] desktop:pb-[30px] mobile:p-[20px];
+    }
+    &__hot-list-title {
+        @apply font-normal mobile:text-[14px] desktopWide:text-[20px] text-white;
+        font-family: var(--second-family);
+        text-align: center;
+        @apply mb-[20px];
+    }
+    &__hot-title {
+        @apply font-normal mobile:text-[14px] desktopWide:text-[16px] text-white desktop:text-start mobile:text-center;
+        font-family: var(--font-family);
+    }
+    &__hot-list,
+    &__skins-list {
+        @apply grid  auto-rows-max gap-[20px] overflow-hidden;
+    }
+    &__skins-list {
+        @apply auto-rows-[90px] gap-[20px] w-full;
+    }
+    &__skins-elem {
+        @apply flex mobile:flex-col desktop:flex-row gap-[10px]  items-center  justify-between;
+    }
+    &__skins-left {
+        @apply max-w-[140px];
+    }
+    &__hot-left {
+        @apply grid desktop:grid-cols-[65%_30%] mobile:text-center desktop:text-end items-center gap-[10px];
+
+        span {
+            @apply font-normal mobile:text-[14px] desktopWide:text-[20px] text-[#38d600];
+            font-family: var(--second-family);
+        }
+    }
+    &__hot-elem {
+        @apply grid;
+    }
+    &__skins-price {
+        @apply relative;
+    }
+    &__skins-old-price-text {
+        @apply relative;
+    }
+    &__range-block {
+        @apply grid gap-[12px];
+    }
+    &__line {
+        @apply w-full mb-[20px];
+    }
+    &__range-header,
+    &__range-footer {
+        @apply grid grid-cols-[repeat(4,55px)]   justify-between w-full;
+    }
+    &__range-header {
+        div {
+            @apply py-[1px] px-[8px];
+            border: 0.5px solid #fff;
+            font-family: var(--font-family);
+            @apply font-normal text-[18px] text-white text-center rounded-[3px] bg-[#520060];
+        }
+    }
+    &__range-footer {
+        font-family: var(--font-family);
+        @apply font-normal text-[20px] text-white text-center;
+    }
+    &__sum-form {
+        label {
+            font-family: var(--font-family);
+            font-weight: 200;
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+        }
+        font-family: var(--font-family);
+        border: 0.5px solid #fff;
+        background: linear-gradient(90deg, rgba(94, 0, 135, 0.12) 3%, rgba(129, 0, 186, 0.12) 80%);
+        @apply px-[25px] py-[20px] rounded-[10px] text-white text-[12px] font-extralight;
+    }
+    &__input-sum {
+        &::placeholder {
+            font-family: var(--font-family);
+            @apply font-normal text-[19px] text-white text-center;
+        }
+        font-family: var(--font-family);
+        @apply font-normal text-[19px] text-white text-center;
+    }
+    &__crossed-out {
+        @apply absolute left-0 right-0 top-0 bottom-0;
+    }
+    &__skins-old-price {
+        @apply font-normal mobile:text-[14px] desktopWide:text-[16px] text-white absolute top-[-10px] left-[-55px];
+        font-family: var(--second-family);
+        text-shadow: 0 1px 11px 0 #f00;
+    }
+    &__skins-new-price {
+        @apply font-normal mobile:text-[14px] desktopWide:text-[20px] text-[#63e000];
+        font-family: var(--second-family);
+        text-shadow: 0 0 8px 0 #2fec00;
+    }
+    &__right {
+        font-family: var(--font-family);
+        align-self: center;
+        ul {
+            list-style: decimal;
+            display: grid;
+            gap: 20px;
+            @apply font-normal mobile:text-[14px] desktopWide:text-[23px] text-white;
+        }
+    }
+    &__commission {
+        @apply flex flex-col justify-center items-center;
+        span {
+            font-family: var(--font-family);
+            @apply font-normal mobile:text-[14px] desktopWide:text-[30px] text-center text-[#9700b0];
+        }
+        p {
+            font-family: var(--font4);
+            @apply font-normal mobile:text-[14px] desktopWide:text-[26px] text-center text-[#d8d8d8];
+        }
+    }
+    &__form-policy {
+        @apply font-normal mobile:text-[14px] desktopWide:text-[20px] text-center text-white;
+        font-family: var(--font-family);
+    }
+    &__middle-block {
+        @apply grid auto-rows-max;
+    }
+    &__form-tab {
+        @apply grid tabletMedium:grid-cols-2 tabletMedium:justify-between mobile:gap-[15px] tabletMedium:gap-[30px] items-center text-center mb-[20px];
+    }
+    &__tab-instruction,
+    &__tab-faq {
+        font-family: var(--second-family);
+        @apply text-white text-center text-[15px] font-normal;
+    }
+    &__tab-instruction,
+    &__tab-faq,
+    &__form-btn-coin,
+    &__form-btn-cart {
+        @apply flex justify-center mobile:text-[14px] tabletMedium:text-[20px] border-0 bg-transparent relative z-[2];
+        &.active {
+            @apply border border-white;
+            background: rgba(88, 0, 126, 0.27);
+        }
+        &:hover {
+            @apply bg-transparent;
+        }
+    }
+    &__form-btn-cart {
+        @apply text-white;
+    }
+    &__coin-cart {
+        font-family: var(--font-family);
+         @apply text-[15px] font-extralight text-center  text-white;
+    }
+    &__lang-btns {
+        @apply grid mobile:grid-cols-3 tabletMedium:grid-cols-1 mobile:grid-rows-[60px];
+        border: 0.5px solid #fff;
+        border-radius: 10px;
+        & > *:deep() {
+            @apply w-full h-full;
+            svg {
+                @apply w-full h-full;
+            }
+        }
+    }
+    &__sum-and-lang-block {
+        @apply grid tabletMedium:grid-cols-[1fr_70px] gap-[15px];
+    }
+    &__price-block {
+        @apply flex gap-[6px] items-center;
+    }
+    &__price {
+        @apply flex gap-[4px] items-center;
+    }
+    &__coin-icon {
+        @apply w-[30px] h-[32px];
+    }
+    &__form-block {
+        @apply grid gap-[20px];
+    }
+    &__right-tabs {
+        @apply mb-[40px];
+    }
+    &__instruction {
+        @apply mb-[51px];
+    }
+    &__coin-block {
+        background: rgba(18, 18, 18, 0.36);
+        @apply px-[25px] py-[20px] border border-white rounded-[10px];
+    }
+    &__coin-title {
+        font-family: var(--font-family);
+        @apply text-[20px] font-normal  text-[#9700b0] mb-[10px];
+    }
+    &__coin-count {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 27px;
+        text-align: center;
+        color: #fff;
+    }
+    &__coin-precent {
+        @apply px-[2px] py-[1px] border border-white rounded-[14px] text-center text-[9px] font-normal  text-white bg-[#580066];
+        font-family: var(--font-family);
+    }
+    &__bonus-register {
+        font-family: var(--font-family);
+        @apply mobile:text-[14px] tabletMedium:text-[20px] font-normal  text-[#696969];
+    }
+    &__tabs {
+        @apply mb-[20px];
+    }
+    &__tabs,
+    &__form-pay-btns {
+        @apply grid grid-cols-2 grid-rows-[50px]  bg-black relative;
+        &::before {
+            content: '';
+            border: 0.5px solid #fff;
+            @apply absolute top-0 bottom-0 left-0 right-0 w-full h-full rounded-[10px] z-[0];
+        }
+    }
+    &__form-btn-coin {
+        @apply text-[#9400ac];
+    }
+    &__form-btn-submit {
+        font-family: var(--second-family);
+        @apply text-[20px] font-normal  text-center flex justify-center items-center bg-[#9400ac] p-[12px];
+        &:hover {
+            @apply bg-[#9400ac];
+        }
+    }
+}

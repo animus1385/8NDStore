@@ -1,0 +1,35 @@
+.hero {
+    @apply relative tabletMedium:pb-[200px] mobile:pb-[100px];
+    &__fone {
+        @apply absolute left-0 right-0 z-[-1];
+    }
+    &__list {
+        @apply flex mobile:flex-col tabletMedium:flex-row tabletMedium:items-end justify-center;
+    }
+    &__elem {
+        @apply relative overflow-hidden  tabletMedium:w-[485px] mobile:w-[300px] tabletMedium:m-0 mobile:m-auto;
+        &:first-child {
+            @apply tabletMedium:translate-x-[35%] z-[-1] mobile:text-center desktopMedium:text-start;
+            p {
+                @apply mobile:max-w-[150px] desktopMedium:max-w-[193px] tabletMedium:tablet:ml-[20px]  laptop:ml-[40px]   mobile:m-auto desktopMedium:ml-[100px];
+            }
+        }
+        &:nth-child(2) {
+            @apply tabletMedium:w-[550px] text-center;
+            p {
+                @apply mobile:max-w-[230px] desktopMedium:max-w-[388px] m-auto;
+            }
+        }
+        &:last-child {
+            @apply tabletMedium:translate-x-[-35%] z-[-1] mobile:text-center tabletMedium:text-end;
+            p {
+                @apply mobile:max-w-[100px] desktopMedium:max-w-[137px] tabletMedium:mr-[50px] mobile:m-auto  tabletMedium:ml-auto  desktopMedium:mr-[130px];
+            }
+        }
+    }
+    &__title {
+        @apply bottom-[15%]  left-0 right-0 mobile:text-[16px] laptop:text-[20px] desktopMedium:text-[31px] font-normal text-white  absolute;
+
+        font-family: var(--second-family);
+    }
+}

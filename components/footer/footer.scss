@@ -1,0 +1,40 @@
+.footer {
+    @apply mobile:py-[50px] tabletMedium:py-[90px];
+    flex: 0 0 auto;
+    &__content {
+        @apply grid mobile:text-center tabletMedium:text-start tabletMedium:grid-cols-3  laptop:grid-cols-[300px_200px_400px] mobile:gap-[20px] laptop:gap-[50px] items-center justify-center;
+    }
+    &__logo {
+        @apply w-[97px] h-[30px] mobile:m-auto tabletMedium:m-0;
+    }
+    &__descr {
+        font-family: var(--font-family);
+        @apply font-extralight mobile:text-[14px] desktop:text-[18px] text-white opacity-[.6];
+    }
+    &__copy {
+        font-family: var(--font3);
+        @apply font-normal mobile:text-[14px] desktop:text-[18px] text-white;
+    }
+    &__title-depart-block {
+        font-family: var(--font-family);
+        @apply font-normal mobile:text-[14px] desktop:text-[20px] text-white;
+    }
+    &__link {
+        font-family: var(--font-family);
+        @apply font-extralight mobile:text-[14px] desktop:text-[20px] text-white opacity-[.6];
+
+        &.active {
+            @apply font-normal opacity-[1];
+        }
+    }
+    &__elem {
+        font-family: var(--font-family);
+    }
+    &__block {
+        @apply grid   gap-[20px] p-[15px] rounded-[20px] overflow-hidden laptop:max-w-max;
+        background: linear-gradient(187deg, #2f376716 0%, #202f363d 100%);
+    }
+    &__list {
+        @apply grid gap-[5px];
+    }
+}

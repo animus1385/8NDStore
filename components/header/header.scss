@@ -1,0 +1,98 @@
+.header,
+.mobile-menu {
+    &__content {
+        @apply grid  grid-cols-[auto_1fr_auto]  gap-[20px] items-center justify-center py-[53px];
+    }
+ 
+    &__logo:deep() {
+        @apply w-[160px] h-[70px] flex relative p-0;
+        svg {
+            @apply w-full h-full;
+        }
+    }
+    &__burger:deep() {
+        @apply h-[50px] w-[50px] mobile:flex laptopMedium:hidden p-0 justify-start mr-auto;
+        svg {
+            @apply w-full h-full;
+        }
+    }
+    &__logo-mobile {
+        @apply w-[120px];
+    }
+    &__balance {
+        @apply text-center text-[#f4f4f4] font-normal text-[10px] px-[10px] py-[15px] justify-center tabletMedium:flex mobile:hidden;
+        border: 1px solid #ac4eff;
+        border-radius: 33px;
+        box-shadow: 0 0 26px 1px rgba(12, 12, 12, 0.5), 0 4px 50px 0 rgba(100, 0, 201, 0.5);
+        background: linear-gradient(90deg, #26184e 0%, #0a001c 100%);
+        font-family: var(--third-family);
+    }
+    &__btns {
+        @apply grid tabletMedium:grid-cols-[186px_60px] items-center justify-end gap-[25px];
+    }
+    &__akk:deep() {
+        @apply p-0;
+        width: 60px;
+        height: 60px;
+        svg {
+            @apply w-full h-full;
+        }
+    }
+    &__nav {
+        @apply laptopMedium:flex items-center justify-center h-full mobile:hidden;
+    }
+    &__list {
+        font-family: var(--second-family);
+        @apply flex gap-[10px] justify-between items-center;
+    }
+    &.type-2 {
+        .header__elem {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__elem {
+        &:not(:last-child) {
+            &::after {
+                content: '|';
+                margin-left: 20px;
+            }
+        }
+        &.mobile {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        @apply font-light text-[20px] text-center text-white uppercase;
+    }
+}
+
+.mobile-menu {
+    &__header {
+        @apply flex items-center;
+    }
+
+    &__balance {
+        @apply flex w-full;
+    }
+    &__logo:deep() {
+        @apply h-[70px] w-[200px];
+    }
+    &__nav {
+        @apply items-start justify-start p-[30px] mobile:flex  laptopMedium:hidden;
+    }
+    &__list {
+        @apply flex-col justify-start items-start;
+    }
+    &__elem {
+        &::after {
+            display: none;
+        }
+    }
+    &__close {
+        @apply ml-auto;
+    }
+}

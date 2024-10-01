@@ -1,0 +1,21 @@
+.about-us {
+    @apply py-[20px] relative bg-black;
+    &__text {
+        @apply font-extralight mobile:text-[14px] tabletMedium:text-[17px] text-center m-auto text-white relative max-w-[779px];
+        font-family: var(--font-family);
+        span {
+            @apply text-[#ff15ed];
+        }
+    }
+    &__title {
+        font-family: var(--font3);
+        text-shadow: 0 0 8px 0 rgba(255, 0, 249, 0.5);
+        @apply text-[#ff00f6];
+    }
+    &::before {
+        content: '';
+        @apply absolute tabletMedium:h-[220%] w-[200%]  bg-black mobile:top-[-50%]  tabletMedium:top-[-75%] bottom-0 left-[-50%] right-0  z-[0];
+
+        filter: blur(48px);
+    }
+}

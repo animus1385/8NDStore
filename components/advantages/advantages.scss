@@ -1,0 +1,33 @@
+.advantages {
+    @apply mobile:py-[50px] tabletMedium:py-[120px] relative;
+    &__fone {
+        @apply absolute left-0 right-0 z-[-1];
+    }
+    &__list {
+        @apply grid desktop:grid-cols-10 desktop:grid-rows-2 gap-[21px] items-center;
+    }
+    &__elem {
+        @apply flex flex-col items-center text-center;
+        &:first-child {
+            @apply desktop:col-start-2 desktop:col-end-5;
+        }
+        &:nth-child(2) {
+            @apply desktop:col-start-7 desktop:col-end-10;
+        }
+        &:nth-child(3) {
+            @apply desktop:col-start-4 desktop:col-end-8;
+        }
+    }
+    &__picture {
+        @apply tabletMedium:w-[380px] h-auto mb-[7px];
+    }
+    &__title {
+        font-family: var(--font3);
+        @apply font-normal mobile:text-[16px] tabletMedium:text-[20px] text-center text-[#ff00f6] mb-[7px];
+    }
+    &__descr {
+        font-family: var(--font-family);
+        @apply font-extralight  mobile:text-[14px] tabletMedium:text-[19px] text-center text-white;
+        letter-spacing: -0.02em;
+    }
+}
