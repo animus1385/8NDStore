@@ -1,6 +1,6 @@
 <template>
     <section class="hero">
-        <div class="hero__container container">
+        <NuxtLink to="/pay" class="hero__container container">
             <ul class="hero__list">
                 <li class="hero__elem">
                     <picture class="hero__picture">
@@ -21,7 +21,7 @@
                     <p class="hero__title">БИРЖА СКИНОВ</p>
                 </li>
             </ul>
-        </div>
+        </NuxtLink>
     </section>
 </template>
 <script setup lang="ts"></script>

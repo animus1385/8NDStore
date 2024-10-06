@@ -5,9 +5,20 @@
     }
     &__list {
         @apply flex mobile:flex-col tabletMedium:flex-row tabletMedium:items-end justify-center;
+        &:hover {
+            .hero__elem {
+                &:first-child,
+                &:last-child {
+                    @apply scale-75;
+                }
+                &:nth-child(2) {
+                    @apply scale-110;
+                }
+            }
+        }
     }
     &__elem {
-        @apply relative overflow-hidden  tabletMedium:w-[485px] mobile:w-[300px] tabletMedium:m-0 mobile:m-auto;
+        @apply relative overflow-hidden  tabletMedium:w-[485px] mobile:w-[300px] tabletMedium:m-0 mobile:m-auto transition-transform duration-500;
         &:first-child {
             @apply tabletMedium:translate-x-[35%] z-[-1] mobile:text-center desktopMedium:text-start;
             p {

@@ -16,7 +16,7 @@
                     @click="isOpen = true"
                 />
                 <div class="header__logo">
-                    <UButton variant="ghost" size="xl" icon="custom-icons:logo"></UButton>
+                    <UButton variant="ghost" to="/" size="xl" icon="custom-icons:logo"></UButton>
                 </div>
 
                 <nav class="header__nav">
